@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/reggie?serverTimezone=UTC
+    username: root
+    password: wk13870241363
+
+  redis:
+    port: 6379
+    host: 192.168.138.100
+    database: 0
+    password: 123456
+  cache:
+    redis:
+      time-to-live: 1800000
+mybatis-plus:
+  configuration:
+    #???????????????????????????????????????
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #??????
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID #????id????
+#      table-prefix: employee #?????????
+reggie:
+  path: D:\
